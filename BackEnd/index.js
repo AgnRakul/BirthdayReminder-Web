@@ -121,19 +121,21 @@ app.get('/Find', cors(), (req, res) => {
 
 })
 
-app.listen(port, () => console.log(`Listening to Port ${port}`));
 
 
-function dater() {
-    var Dater = new Date();
+app.listen(process.env.PORT || port);
 
-    Dater.setDate(Dater.getDate());
 
-    MyDateString = (Dater.getFullYear() + '-' + ('0' + (Dater.getMonth() + 1)).slice(-2) + '-' + ('0' + Dater.getDate()).slice(-2));
+// function dater() {
+//     var Dater = new Date();
 
-    return MyDateString;
+//     Dater.setDate(Dater.getDate());
 
-}
+//     MyDateString = (Dater.getFullYear() + '-' + ('0' + (Dater.getMonth() + 1)).slice(-2) + '-' + ('0' + Dater.getDate()).slice(-2));
+
+//     return MyDateString;
+
+// }
 
 
 
